@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/birincisayi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="birinci sayiyi gir"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/ikincisayi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ikincisayi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="ikinci sayiyi gir"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birincisayi" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="165dp"
+        android:layout_height="108dp"
+        android:text="Sonuc:"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="370dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="396dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ikincisayi">
+
+        <Button
+            android:id="@+id/toplama"
+            android:layout_width="63dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="toplama"
+            android:text="+"
+            app:layout_constraintEnd_toStartOf="@+id/cikarma"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="324dp" />
+
+        <Button
+            android:id="@+id/cikarma"
+            android:layout_width="63dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="cikarma"
+            android:text="-"
+            app:layout_constraintEnd_toStartOf="@+id/bolme"
+            tools:layout_editor_absoluteY="322dp" />
+
+        <Button
+            android:id="@+id/bolme"
+            android:layout_width="63dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="bolme"
+            android:text="//"
+            app:layout_constraintEnd_toStartOf="@+id/carpma"
+            tools:layout_editor_absoluteY="320dp" />
+
+        <Button
+            android:id="@+id/carpma"
+            android:layout_width="63dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="32dp"
+            android:onClick="carpma"
+            android:text="x"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="322dp" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
